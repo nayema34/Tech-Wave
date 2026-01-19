@@ -4,7 +4,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 header{
     background-color: #1A0B2E;
 }
@@ -431,8 +434,6 @@ footer p{
     font-size: 14px;
 }
 
-
-/* Media query */
 footer{
     width: 100%;
     display: flex;
@@ -468,4 +469,352 @@ footer p{
     margin-top: 50px;
     color: #b8a4a4;
     font-size: 14px;
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav::after {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background-image: url("./assets/hamburger-menu.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .banner {
+        height: 600px;
+    }
+
+    .banner img {
+        width: 200px;
+    }
+
+    .banner .img2 {
+        width: 120px;
+    }
+
+    .banner .new {
+        font-size: 14px;
+        padding: 6px 16px;
+        transform: translate(40%, -500%);
+    }
+
+    .texts h1 {
+        font-size: 32px;
+    }
+
+    .texts p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .texts .buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .texts button {
+        width: 100%;
+    }
+
+    .about {
+        padding: 0 20px;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .ratings {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .box h1 {
+        font-size: 36px;
+    }
+
+    .why {
+        padding-top: 50px;
+    }
+
+    .why h1 {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+
+    .cards {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .cards > div {
+        padding: 20px;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .cards img {
+        width: 50px;
+    }
+
+    .episodes h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .video-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .video1 {
+        width: 100%;
+    }
+
+    .video1 iframe {
+        width: 100%;
+        height: 220px;
+    }
+
+    .video1 h2 {
+        font-size: 18px;
+    }
+
+    .video1 p {
+        font-size: 14px;
+    }
+
+    .host h1 {
+        font-size: 28px;
+    }
+
+    .card-host {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .card-host img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .texts2 {
+        align-items: center;
+    }
+
+    .texts2 h1 {
+        font-size: 24px;
+    }
+
+    .texts2 p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer h1 {
+        font-size: 32px;
+    }
+
+    .social {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer p {
+        text-align: center;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+    nav {
+        width: 90%;
+    }
+
+    .banner {
+        height: 700px;
+    }
+
+    .banner img {
+        width: 260px;
+    }
+
+    .banner .img2 {
+        width: 160px;
+    }
+
+    .texts h1 {
+        font-size: 42px;
+    }
+
+    .texts p {
+        font-size: 16px;
+        padding: 0 40px;
+    }
+
+    .about {
+        padding: 0 50px;
+    }
+
+    .ratings {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .box {
+        width: 45%;
+    }
+
+    .cards {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card1 {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .card2,
+    .card3,
+    .card4,
+    .card5 {
+        grid-column: span 1;
+    }
+
+    .video-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .video1 {
+        width: 45%;
+    }
+
+    .video1 iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .card-host {
+        width: 90%;
+        gap: 30px;
+    }
+
+    .card-host img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .texts2 h1 {
+        font-size: 28px;
+    }
+
+    footer h1 {
+        font-size: 40px;
+    }
+
+    .social {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    header,
+    section,
+    .why,
+    .episodes,
+    .host,
+    footer {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    nav,
+    .about,
+    .cards,
+    .ratings,
+    .video-cards,
+    .card-host {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cards {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .video-cards {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .video1 {
+        max-width: 100%;
+    }
+
+    .video1 iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-host img {
+        max-width: 100%;
+    }
 }
