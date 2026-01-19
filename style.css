@@ -791,6 +791,67 @@ footer p{
         width: 100px;
     }
 }
+/* Default / Large devices (>992px) */
+.card-host img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Medium devices (576px – 992px) */
+@media (min-width: 576px) and (max-width: 992px) {
+    .card-host img {
+        width: 130px;
+    }
+
+    .icons img {
+        width: 35px;
+        height: 35px;
+        margin-right: 8px;
+    }
+
+    .texts2 h1 {
+        font-size: 1.8rem;
+    }
+
+    .texts2 p {
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (≤576px) */
+@media (max-width: 576px) {
+    .card-host {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-host img {
+        width: 100px;
+        margin-bottom: 15px;
+    }
+
+    .icons img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .texts2 h1 {
+        font-size: 1.5rem;
+    }
+
+    .texts2 p {
+        font-size: 0.9rem;
+    }
+}
+
 
 @media (max-width: 900px) {
 
